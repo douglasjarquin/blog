@@ -9,7 +9,11 @@ draft: false
 
 # My Default Apps of 2024
 
+## Overview
+
 As I move into 2025 with some new or improved processes, I wanted to take a minute and document what I did in 2024. Below is my list of default apps across pretty much every category that exists. I forgot where I originally read about this, but you can search and find other blogs that post a similar list.
+
+## List
 
 | CATEGORY | 2024 | 2023 |
 |:--|:--|:--|
@@ -44,7 +48,11 @@ As I move into 2025 with some new or improved processes, I wanted to take a minu
 | Package tracking | Reminders list | Reminders list |
 | AI chatbot | [Msty](https://msty.app) | ChatGPT |
 
+## Built-in Apps
+
 In 2023 I made the decision to only use the built-in macOS productivity apps. This saved me a ton of time avoiding the rabbit hole of evaluating new software. On top of that, as part of the last two macOS versions Apple release some really cool new features to their apps. Timeboxing with Calendar and Reminders is world-class now. Nothing else needed.
+
+## Notable changes from 2023
 
 Let's go over notable changes.
 
