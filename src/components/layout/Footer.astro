@@ -9,7 +9,6 @@ const year = new Date().getFullYear();
 		<span>&copy; {siteConfig.author} {year} · Davie, FL</span>
 		<nav aria-label="Footer links" class="footer-links">
 			{menuLinks.map((link) => <a href={link.path}>{link.title}</a>)}
-			<a href="/design-system/">System</a>
 		</nav>
 	</div>
 </footer>
