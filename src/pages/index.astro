@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
+import PostPreview from "@/components/blog/PostPreview.astro";
 import FormattedDate from "@/components/FormattedDate.astro";
 import Note from "@/components/note/Note.astro";
 import SectionHeader from "@/components/theme/SectionHeader.astro";
@@ -9,6 +10,7 @@ import { collectionDateSort } from "@/utils/date";
 
 const allPosts = (await getAllPosts()).sort(collectionDateSort) as CollectionEntry<"post">[];
 const latestPosts = allPosts.slice(0, 5);
+const pinnedPosts = allPosts.filter((post) => post.data.pinned).slice(0, 3);
 const latestNotes = (await getCollection("note"))
 	.sort(collectionDateSort)
 	.slice(0, 3) as CollectionEntry<"note">[];
@@ -20,23 +22,31 @@ const latestNotes = (await getCollection("note"))
     <p class="lead">I'm Doug and this is my site. I write about web development, programming, and other things I'm interested in. Read <a href="/about/">about me</a> or see what I've been up to.</p>
   </section>
 
+  {pinnedPosts.length > 0 && (
+    <section class="section">
+      <SectionHeader title="Pinned" />
+      <div>
+        {pinnedPosts.map((post) => <PostPreview post={post} />)}
+      </div>
+    </section>
+  )}
+
   <section class="section">
     <SectionHeader title="Posts" href="/posts/" />
     <div class="post-table-wrap">
       <table class="post-table">
         <caption>Recent rounds</caption>
-        <thead><tr><th>No.</th><th>Post</th><th>Par</th><th>Date</th></tr></thead>
+        <thead><tr><th>No.</th><th>Post</th><th>Date</th></tr></thead>
         <tbody>
           {latestPosts.map((post, index) => (
             <tr>
               <td>{String(index + 1).padStart(2, "0")}</td>
               <td><a href={"/posts/" + post.id + "/"}>{post.data.title}</a></td>
-              <td>{post.data.title.includes("default") ? "4" : "3"}</td>
               <td><FormattedDate date={post.data.publishDate} /></td>
             </tr>
           ))}
         </tbody>
-        <tfoot><tr><td>Out</td><td>{latestPosts.length} posts</td><td>{latestPosts.length ? latestPosts.length + 3 : 0}</td><td></td></tr></tfoot>
+        <tfoot><tr><td>Out</td><td>{latestPosts.length} posts</td><td></td></tr></tfoot>
       </table>
     </div>
   </section>

@@ -21,7 +21,7 @@ const readingTime: string = remarkPluginFrontmatter.readingTime;
     <a class="back-link" href="/posts/">← All posts</a>
     <header class="post-header">
       <h1>{title}</h1>
-      <span class="meta"><FormattedDate date={publishDate} /> · Davie, FL · {readingTime || "par 4"}</span>
+      <span class="meta"><FormattedDate date={publishDate} /> · Davie, FL{readingTime && ` · ${readingTime}`}</span>
       {tags.length > 0 && (
         <ul class="tag-list" aria-label="Post tags">
           {tags.map((tag) => <li><a href={"/tags/" + tag + "/"}>#{tag}</a></li>)}

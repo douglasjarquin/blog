@@ -11,5 +11,5 @@ const { href, type = "button", variant = "ghost" } = Astro.props;
 {href ? (
   <a class:list={["button", variant === "solid" && "button-solid"]} href={href}><slot /></a>
 ) : (
-  <button class:list={[variant === "solid" && "button-solid"]} type={type}><slot /></button>
+  <button class:list={["button", variant === "solid" && "button-solid"]} type={type}><slot /></button>
 )}
