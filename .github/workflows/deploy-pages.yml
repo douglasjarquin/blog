@@ -38,6 +38,9 @@ jobs:
       - name: Build site
         run: pnpm build
 
+      - name: Index site with Pagefind
+        run: pnpm run postbuild
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
