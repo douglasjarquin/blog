@@ -7,8 +7,6 @@ tags: ["apps", "setup"]
 draft: false
 ---
 
-# My Default Apps of 2024
-
 ## Overview
 
 As I move into 2025 with some new or improved processes, I wanted to take a minute and document what I did in 2024. Below is my list of default apps across pretty much every category that exists. I forgot where I originally read about this, but you can search and find other blogs that post a similar list.
