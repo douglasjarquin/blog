@@ -8,8 +8,14 @@ interface Props {
 const { href, type = "button", variant = "ghost" } = Astro.props;
 ---
 
-{href ? (
-  <a class:list={["button", variant === "solid" && "button-solid"]} href={href}><slot /></a>
-) : (
-  <button class:list={["button", variant === "solid" && "button-solid"]} type={type}><slot /></button>
-)}
+{
+	href ? (
+		<a class:list={["button", variant === "solid" && "button-solid"]} href={href}>
+			<slot />
+		</a>
+	) : (
+		<button class:list={["button", variant === "solid" && "button-solid"]} type={type}>
+			<slot />
+		</button>
+	)
+}

@@ -40,7 +40,8 @@
 	});
 
 	document.addEventListener("click", (event) => {
-		const target = event.target instanceof Element ? event.target.closest("theme-toggle button") : null;
+		const target =
+			event.target instanceof Element ? event.target.closest("theme-toggle button") : null;
 		if (!target) return;
 		const dark = document.documentElement.getAttribute("data-theme") === "dark";
 		setTheme(dark ? "light" : "dark");

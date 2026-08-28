@@ -7,115 +7,212 @@ import PageLayout from "@/layouts/Base.astro";
 ---
 
 <PageLayout meta={{ description: "The Doug Blog Theme reference page", title: "Design system" }}>
-  <div class="page-intro">
-    <h1>Design system</h1>
-    <p>Every visible rule has a name. This is the reference I use when I change the site.</p>
-  </div>
+	<div class="page-intro">
+		<h1>Design system</h1>
+		<p>Every visible rule has a name. This is the reference I use when I change the site.</p>
+	</div>
 
-  <section class="design-system-section">
-    <SectionHeader title="Type" />
-    <div class="card">
-      <p class="type-display">Literata is for the words.</p>
-      <p class="type-mono">Space Mono is for the useful labels.</p>
-      <p>Body copy stays comfortable at 17.5px with a generous line height. <strong>Strong text is quiet.</strong> <small>Small text is still readable.</small></p>
-    </div>
-  </section>
+	<section class="design-system-section">
+		<SectionHeader title="Type" />
+		<div class="card">
+			<p class="type-display">Literata is for the words.</p>
+			<p class="type-mono">Space Mono is for the useful labels.</p>
+			<p>
+				Body copy stays comfortable at 17.5px with a generous line height. <strong
+					>Strong text is quiet.</strong
+				>
+				<small>Small text is still readable.</small>
+			</p>
+		</div>
+	</section>
 
-  <section class="design-system-section">
-    <SectionHeader title="Color" />
-    <div class="design-grid">
-      <Card><p><span class="color-swatch swatch-paper"></span><span class="label">Paper</span></p><p>Page surface.</p></Card>
-      <Card><p><span class="color-swatch swatch-ink"></span><span class="label">Ink</span></p><p>Primary text.</p></Card>
-      <Card><p><span class="color-swatch swatch-muted"></span><span class="label">Muted</span></p><p>Supporting text.</p></Card>
-      <Card><p><span class="color-swatch swatch-line"></span><span class="label">Line</span></p><p>Hairlines.</p></Card>
-      <Card><p><span class="color-swatch swatch-accent"></span><span class="label">Fairway</span></p><p>The only brand accent.</p></Card>
-      <Card><p><span class="color-swatch swatch-danger"></span><span class="label">Danger</span></p><p>Errors only.</p></Card>
-      <Card><p><span class="color-swatch swatch-warn"></span><span class="label">Warn</span></p><p>Warnings.</p></Card>
-      <Card><p><span class="color-swatch swatch-info"></span><span class="label">Info</span></p><p>Information.</p></Card>
-      <Card><p><span class="color-swatch swatch-code"></span><span class="label">Code panel</span></p><p>Fixed dark panel.</p></Card>
-    </div>
-  </section>
+	<section class="design-system-section">
+		<SectionHeader title="Color" />
+		<div class="design-grid">
+			<Card
+				><p><span class="color-swatch swatch-paper"></span><span class="label">Paper</span></p><p>
+					Page surface.
+				</p></Card
+			>
+			<Card
+				><p><span class="color-swatch swatch-ink"></span><span class="label">Ink</span></p><p>
+					Primary text.
+				</p></Card
+			>
+			<Card
+				><p><span class="color-swatch swatch-muted"></span><span class="label">Muted</span></p><p>
+					Supporting text.
+				</p></Card
+			>
+			<Card
+				><p><span class="color-swatch swatch-line"></span><span class="label">Line</span></p><p>
+					Hairlines.
+				</p></Card
+			>
+			<Card
+				><p><span class="color-swatch swatch-accent"></span><span class="label">Fairway</span></p><p
+				>
+					The only brand accent.
+				</p></Card
+			>
+			<Card
+				><p><span class="color-swatch swatch-danger"></span><span class="label">Danger</span></p><p>
+					Errors only.
+				</p></Card
+			>
+			<Card
+				><p><span class="color-swatch swatch-warn"></span><span class="label">Warn</span></p><p>
+					Warnings.
+				</p></Card
+			>
+			<Card
+				><p><span class="color-swatch swatch-info"></span><span class="label">Info</span></p><p>
+					Information.
+				</p></Card
+			>
+			<Card
+				><p>
+					<span class="color-swatch swatch-code"></span><span class="label">Code panel</span>
+				</p><p>Fixed dark panel.</p></Card
+			>
+		</div>
+	</section>
 
-  <section class="design-system-section">
-    <SectionHeader title="Semantic elements" />
-    <h3>Lists</h3>
-    <ul><li>One thing at a time.</li><li>Write it down.</li><li>Move on.</li></ul>
-    <ol><li>Read the docs.</li><li>Try the small version.</li><li>Keep the useful part.</li></ol>
-    <h3>Definition list</h3>
-    <dl><dt>Watching</dt><dd>Formula 1 — forza Ferrari</dd><dt>Playing</dt><dd>Golf</dd><dt>Building</dt><dd>Small tools for my own use.</dd></dl>
-    <h3>Scorecard table</h3>
-    <table>
-      <caption>Weekend scorecard</caption>
-      <thead><tr><th>Hole</th><th>Plan</th><th>Par</th></tr></thead>
-      <tbody><tr><td>01</td><td>Keep it small</td><td>3</td></tr><tr><td>02</td><td>Ship the useful bit</td><td>4</td></tr></tbody>
-      <tfoot><tr><td>Out</td><td>Two holes</td><td>7</td></tr></tfoot>
-    </table>
-    <h3>Quote, code, and rule</h3>
-    <blockquote><p>The best default is the one I stop thinking about.</p><cite>Doug, probably</cite></blockquote>
-    <pre><code># one small command
+	<section class="design-system-section">
+		<SectionHeader title="Semantic elements" />
+		<h3>Lists</h3>
+		<ul><li>One thing at a time.</li><li>Write it down.</li><li>Move on.</li></ul>
+		<ol><li>Read the docs.</li><li>Try the small version.</li><li>Keep the useful part.</li></ol>
+		<h3>Definition list</h3>
+		<dl>
+			<dt>Watching</dt><dd>Formula 1 — forza Ferrari</dd><dt>Playing</dt><dd>Golf</dd><dt>
+				Building
+			</dt><dd>Small tools for my own use.</dd>
+		</dl>
+		<h3>Scorecard table</h3>
+		<table>
+			<caption>Weekend scorecard</caption>
+			<thead><tr><th>Hole</th><th>Plan</th><th>Par</th></tr></thead>
+			<tbody
+				><tr><td>01</td><td>Keep it small</td><td>3</td></tr><tr
+					><td>02</td><td>Ship the useful bit</td><td>4</td></tr
+				></tbody
+			>
+			<tfoot><tr><td>Out</td><td>Two holes</td><td>7</td></tr></tfoot>
+		</table>
+		<h3>Quote, code, and rule</h3>
+		<blockquote>
+			<p>The best default is the one I stop thinking about.</p><cite>Doug, probably</cite>
+		</blockquote>
+		<pre><code># one small command
 pnpm build
 echo "done"</code></pre>
-    <p>Inline <code>code</code>, <kbd>⌘ K</kbd>, and a semantic rule follow.</p>
-    <hr />
-    <details>
-      <summary>Open the small print</summary>
-      <p>I prefer boring infrastructure and readable pages.</p>
-    </details>
-  </section>
+		<p>Inline <code>code</code>, <kbd>⌘ K</kbd>, and a semantic rule follow.</p>
+		<hr />
+		<details>
+			<summary>Open the small print</summary>
+			<p>I prefer boring infrastructure and readable pages.</p>
+		</details>
+	</section>
 
-  <section class="design-system-section">
-    <SectionHeader title="Core components" />
-    <div class="design-grid">
-      <Card><h3>Card</h3><p>A hairline gives the content a boundary.</p></Card>
-      <Card dashed><h3>Aside card</h3><p>A dashed rule says this is supporting material.</p></Card>
-      <Card><h3>Badge</h3><p><Badge label="Muted" /><Badge label="Fairway" tone="accent" /> <Badge label="Warning" tone="warn" /></p></Card>
-      <Card><h3>Buttons</h3><p><Button>Ghost</Button> <Button variant="solid">Submit</Button></p></Card>
-    </div>
-  </section>
+	<section class="design-system-section">
+		<SectionHeader title="Core components" />
+		<div class="design-grid">
+			<Card><h3>Card</h3><p>A hairline gives the content a boundary.</p></Card>
+			<Card dashed><h3>Aside card</h3><p>A dashed rule says this is supporting material.</p></Card>
+			<Card
+				><h3>Badge</h3><p>
+					<Badge label="Muted" /><Badge label="Fairway" tone="accent" />
+					<Badge label="Warning" tone="warn" />
+				</p></Card
+			>
+			<Card
+				><h3>Buttons</h3><p><Button>Ghost</Button> <Button variant="solid">Submit</Button></p></Card
+			>
+		</div>
+	</section>
 
-  <section class="design-system-section">
-    <SectionHeader title="Forms" />
-    <form class="control-stack" onsubmit="return false">
-      <div><label for="demo-name">Name</label><input id="demo-name" placeholder="Doug" /></div>
-      <div><label for="demo-topic">Topic</label><select id="demo-topic"><option>Web development</option><option>Golf</option><option>F1</option></select></div>
-      <div><label for="demo-message">Note</label><textarea id="demo-message" placeholder="I kept this short."></textarea></div>
-      <fieldset>
-        <legend>Choices</legend>
-        <div class="control-stack">
-          <div class="choice-row"><input id="demo-check" type="checkbox" /><label for="demo-check">Remember this</label></div>
-          <div class="choice-row"><input id="demo-radio-a" name="demo-radio" type="radio" value="one" /><label for="demo-radio-a">One</label></div>
-          <div class="choice-row"><input id="demo-radio-b" name="demo-radio" type="radio" value="two" /><label for="demo-radio-b">Two</label></div>
-          <div><label for="demo-range">Confidence</label><input id="demo-range" type="range" min="0" max="10" value="7" /></div>
-          <div class="switch-row"><button aria-checked="false" aria-label="Toggle notifications" class="switch" id="demo-switch" role="switch" type="button"></button><label for="demo-switch">Notifications</label></div>
-        </div>
-      </fieldset>
-      <div><Button type="submit" variant="solid">Save specimen</Button></div>
-    </form>
-  </section>
+	<section class="design-system-section">
+		<SectionHeader title="Forms" />
+		<form class="control-stack" onsubmit="return false">
+			<div><label for="demo-name">Name</label><input id="demo-name" placeholder="Doug" /></div>
+			<div>
+				<label for="demo-topic">Topic</label><select id="demo-topic"
+					><option>Web development</option><option>Golf</option><option>F1</option></select
+				>
+			</div>
+			<div>
+				<label for="demo-message">Note</label><textarea
+					id="demo-message"
+					placeholder="I kept this short."></textarea>
+			</div>
+			<fieldset>
+				<legend>Choices</legend>
+				<div class="control-stack">
+					<div class="choice-row">
+						<input id="demo-check" type="checkbox" /><label for="demo-check">Remember this</label>
+					</div>
+					<div class="choice-row">
+						<input id="demo-radio-a" name="demo-radio" type="radio" value="one" /><label
+							for="demo-radio-a">One</label
+						>
+					</div>
+					<div class="choice-row">
+						<input id="demo-radio-b" name="demo-radio" type="radio" value="two" /><label
+							for="demo-radio-b">Two</label
+						>
+					</div>
+					<div>
+						<label for="demo-range">Confidence</label><input
+							id="demo-range"
+							type="range"
+							min="0"
+							max="10"
+							value="7"
+						/>
+					</div>
+					<div class="switch-row">
+						<button
+							aria-checked="false"
+							aria-label="Toggle notifications"
+							class="switch"
+							id="demo-switch"
+							role="switch"
+							type="button"></button><label for="demo-switch">Notifications</label>
+					</div>
+				</div>
+			</fieldset>
+			<div><Button type="submit" variant="solid">Save specimen</Button></div>
+		</form>
+	</section>
 
-  <section class="design-system-section">
-    <SectionHeader title="Spacing and motifs" />
-    <div class="card">
-      <p class="brand-motif">Section header marker</p>
-      <p><a class="brand-mark" href="/">DJ</a></p>
-      <div class="spacing-demo" aria-label="Spacing scale"><span style="width: 4px"></span><span style="width: 8px"></span><span style="width: 14px"></span><span style="width: 26px"></span><span style="width: 36px"></span><span style="width: 54px"></span></div>
-      <p>Spacing grows from 4px to 54px. The paper stays flat.</p>
-    </div>
-  </section>
+	<section class="design-system-section">
+		<SectionHeader title="Spacing and motifs" />
+		<div class="card">
+			<p class="brand-motif">Section header marker</p>
+			<p><a class="brand-mark" href="/">DJ</a></p>
+			<div class="spacing-demo" aria-label="Spacing scale">
+				<span style="width: 4px"></span><span style="width: 8px"></span><span style="width: 14px"
+				></span><span style="width: 26px"></span><span style="width: 36px"></span><span
+					style="width: 54px"></span>
+			</div>
+			<p>Spacing grows from 4px to 54px. The paper stays flat.</p>
+		</div>
+	</section>
 
-  <section class="design-system-section">
-    <SectionHeader title="Modes" />
-    <div class="card card-dashed">
-      <p>Use the night/day control above to inspect the same page in light and dark.</p>
-      <p class="meta">Dark mode is data-theme="dark".</p>
-    </div>
-  </section>
+	<section class="design-system-section">
+		<SectionHeader title="Modes" />
+		<div class="card card-dashed">
+			<p>Use the night/day control above to inspect the same page in light and dark.</p>
+			<p class="meta">Dark mode is data-theme="dark".</p>
+		</div>
+	</section>
 </PageLayout>
 
 <script is:inline>
-  const switchButton = document.getElementById("demo-switch");
-  switchButton?.addEventListener("click", () => {
-    const next = switchButton.getAttribute("aria-checked") !== "true";
-    switchButton.setAttribute("aria-checked", String(next));
-  });
+	const switchButton = document.getElementById("demo-switch");
+	switchButton?.addEventListener("click", () => {
+		const next = switchButton.getAttribute("aria-checked") !== "true";
+		switchButton.setAttribute("aria-checked", String(next));
+	});
 </script>

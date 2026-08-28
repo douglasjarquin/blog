@@ -34,38 +34,57 @@ const paginationProps = {
 };
 ---
 
-<PageLayout meta={{ description: "Read my collection of posts and the things that interest me", title: "Posts" }}>
-  <div class="page-intro">
-    <h1>Posts</h1>
-    <p>Things I've written down so I can find them again.</p>
-  </div>
+<PageLayout
+	meta={{
+		description: "Read my collection of posts and the things that interest me",
+		title: "Posts",
+	}}
+>
+	<div class="page-intro">
+		<h1>Posts</h1>
+		<p>Things I've written down so I can find them again.</p>
+	</div>
 
-  {pinnedPosts.length > 0 && (
-    <section class="section">
-      <SectionHeader title="Pinned" />
-      <div>
-        {pinnedPosts.map((post) => <PostPreview post={post} withDesc />)}
-      </div>
-    </section>
-  )}
+	{
+		pinnedPosts.length > 0 && (
+			<section class="section">
+				<SectionHeader title="Pinned" />
+				<div>
+					{pinnedPosts.map((post) => (
+						<PostPreview post={post} withDesc />
+					))}
+				</div>
+			</section>
+		)
+	}
 
-  {yearKeys.map((year) => (
-    <section class="section">
-      <SectionHeader title={year} />
-      <div>
-        {groupedByYear[year]?.map((post) => <PostPreview post={post} withDesc />)}
-      </div>
-    </section>
-  ))}
+	{
+		yearKeys.map((year) => (
+			<section class="section">
+				<SectionHeader title={year} />
+				<div>
+					{groupedByYear[year]?.map((post) => (
+						<PostPreview post={post} withDesc />
+					))}
+				</div>
+			</section>
+		))
+	}
 
-  {uniqueTags.length > 0 && (
-    <section class="section">
-      <SectionHeader title="Tags" />
-      <ul class="tag-list">
-        {uniqueTags.map((tag) => <li><a href={"/tags/" + tag + "/"}>#{tag}</a></li>)}
-      </ul>
-    </section>
-  )}
+	{
+		uniqueTags.length > 0 && (
+			<section class="section">
+				<SectionHeader title="Tags" />
+				<ul class="tag-list">
+					{uniqueTags.map((tag) => (
+						<li>
+							<a href={"/tags/" + tag + "/"}>#{tag}</a>
+						</li>
+					))}
+				</ul>
+			</section>
+		)
+	}
 
-  <Pagination {...paginationProps} />
+	<Pagination {...paginationProps} />
 </PageLayout>

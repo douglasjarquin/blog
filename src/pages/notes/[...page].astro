@@ -24,17 +24,23 @@ const paginationProps = {
 ---
 
 <PageLayout meta={{ description: "Read my collection of notes", title: "Notes" }}>
-  <div class="page-intro">
-    <h1>Notes</h1>
-    <p>Small thoughts. Usually shorter than a post.</p>
-  </div>
+	<div class="page-intro">
+		<h1>Notes</h1>
+		<p>Small thoughts. Usually shorter than a post.</p>
+	</div>
 
-  <section class="section">
-    <SectionHeader title="Recent notes" />
-    <ul>
-      {page.data.map((note) => <li><Note note={note} as="h2" isPreview /></li>)}
-    </ul>
-  </section>
+	<section class="section">
+		<SectionHeader title="Recent notes" />
+		<ul>
+			{
+				page.data.map((note) => (
+					<li>
+						<Note note={note} as="h2" isPreview />
+					</li>
+				))
+			}
+		</ul>
+	</section>
 
-  <Pagination {...paginationProps} />
+	<Pagination {...paginationProps} />
 </PageLayout>

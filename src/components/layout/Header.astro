@@ -14,7 +14,13 @@ const isCurrent = (path: string) => {
 	<a class="site-title" href="/">{siteConfig.title}</a>
 	<div class="status-line">🏎️ watching F1</div>
 	<nav aria-label="Main menu" class="site-nav">
-		{menuLinks.map((link) => <a aria-current={isCurrent(link.path) ? "page" : undefined} href={link.path}>{link.title}</a>)}
+		{
+			menuLinks.map((link) => (
+				<a aria-current={isCurrent(link.path) ? "page" : undefined} href={link.path}>
+					{link.title}
+				</a>
+			))
+		}
 		<ThemeToggle />
 	</nav>
 </header>

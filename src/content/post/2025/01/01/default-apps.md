@@ -13,38 +13,38 @@ As I move into 2025 with some new or improved processes, I wanted to take a minu
 
 ## List
 
-| CATEGORY | 2024 | 2023 |
-|:--|:--|:--|
-| Mail service | [Gmail](https://gmail.com), [Protonmail](https://proton.me/mail) | [Gmail](https://gmail.com), [Protonmail](https://proton.me/mail) |
-| Mail client | Apple Mail | Apple Mail |
-| Tasks | Apple Reminders | Apple Reminders |
-| RSS service | n/a | n/a |
-| RSS client | n/a | n/a |
-| Launcher | `open -a` | Spotlight |
-| Cloud storage | iCloud | iCloud |
-| Photo library | Apple Photos | Apple Photos |
-| Photo editing | Apple Photos | Apple Photos |
-| Web browser | Safari, Chrome (for work) | Safari, Chrome (for work) |
-| Calendar | Apple Calendar | Apple Calendar |
-| Reading | Kindle, Apple Books | Kindle, Apple Books |
-| Weather | Apple Weather | Apple Weather |
-| Podcasts | Apple Podcasts | Apple Podcasts |
-| Music | Apple Music, YouTube Music, Spotify | Apple Music |
-| Clipboard manager | [Pastebot](https://tapbots.com/pastebot/) | [Pastebot](https://tapbots.com/pastebot/) |
-| Passwords | [1Password](https://1password.com) | [1Password](https://1password.com) |
-| Budgeting | [Copilot](https://copilot.money) | [Mint](https://mint.intuit.com) |
-| Transcriptions | n/a | n/a |
-| Mastodon | n/a | n/a |
-| Movie discovery/tracking | n/a | n/a |
-| Social | n/a | n/a |
-| Screenshots | macOS | macOS |
-| Notes | Apple Notes | Apple Notes |
-| Code editor | [Visual Studio Code](https://code.visualstudio.com), [Nevoim](https://neovim.io) | [Visual Studio Code](https://code.visualstudio.com) |
-| Terminal | [Wezterm](https://wezfurlong.org/wezterm/index.html) | Apple Terminal |
-| Search | [Perplexity](https://www.perplexity.ai) | Google |
-| Flight tracking | n/a | n/a |
-| Package tracking | Reminders list | Reminders list |
-| AI chatbot | [Msty](https://msty.app) | ChatGPT |
+| CATEGORY                 | 2024                                                                             | 2023                                                             |
+| :----------------------- | :------------------------------------------------------------------------------- | :--------------------------------------------------------------- |
+| Mail service             | [Gmail](https://gmail.com), [Protonmail](https://proton.me/mail)                 | [Gmail](https://gmail.com), [Protonmail](https://proton.me/mail) |
+| Mail client              | Apple Mail                                                                       | Apple Mail                                                       |
+| Tasks                    | Apple Reminders                                                                  | Apple Reminders                                                  |
+| RSS service              | n/a                                                                              | n/a                                                              |
+| RSS client               | n/a                                                                              | n/a                                                              |
+| Launcher                 | `open -a`                                                                        | Spotlight                                                        |
+| Cloud storage            | iCloud                                                                           | iCloud                                                           |
+| Photo library            | Apple Photos                                                                     | Apple Photos                                                     |
+| Photo editing            | Apple Photos                                                                     | Apple Photos                                                     |
+| Web browser              | Safari, Chrome (for work)                                                        | Safari, Chrome (for work)                                        |
+| Calendar                 | Apple Calendar                                                                   | Apple Calendar                                                   |
+| Reading                  | Kindle, Apple Books                                                              | Kindle, Apple Books                                              |
+| Weather                  | Apple Weather                                                                    | Apple Weather                                                    |
+| Podcasts                 | Apple Podcasts                                                                   | Apple Podcasts                                                   |
+| Music                    | Apple Music, YouTube Music, Spotify                                              | Apple Music                                                      |
+| Clipboard manager        | [Pastebot](https://tapbots.com/pastebot/)                                        | [Pastebot](https://tapbots.com/pastebot/)                        |
+| Passwords                | [1Password](https://1password.com)                                               | [1Password](https://1password.com)                               |
+| Budgeting                | [Copilot](https://copilot.money)                                                 | [Mint](https://mint.intuit.com)                                  |
+| Transcriptions           | n/a                                                                              | n/a                                                              |
+| Mastodon                 | n/a                                                                              | n/a                                                              |
+| Movie discovery/tracking | n/a                                                                              | n/a                                                              |
+| Social                   | n/a                                                                              | n/a                                                              |
+| Screenshots              | macOS                                                                            | macOS                                                            |
+| Notes                    | Apple Notes                                                                      | Apple Notes                                                      |
+| Code editor              | [Visual Studio Code](https://code.visualstudio.com), [Nevoim](https://neovim.io) | [Visual Studio Code](https://code.visualstudio.com)              |
+| Terminal                 | [Wezterm](https://wezfurlong.org/wezterm/index.html)                             | Apple Terminal                                                   |
+| Search                   | [Perplexity](https://www.perplexity.ai)                                          | Google                                                           |
+| Flight tracking          | n/a                                                                              | n/a                                                              |
+| Package tracking         | Reminders list                                                                   | Reminders list                                                   |
+| AI chatbot               | [Msty](https://msty.app)                                                         | ChatGPT                                                          |
 
 ## Built-in Apps
 

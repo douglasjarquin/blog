@@ -14,18 +14,18 @@ The voice is first person, plain, dry, and lightly self-aware.
 
 ## 2. Color
 
-| Role | Token | Light | Dark | Usage |
-| --- | --- | --- | --- | --- |
-| Page surface | `--paper` | `#f8f4ec` | `#171410` | Body and page background |
-| Primary text | `--ink` | `#282218` | `#e9e1cf` | Body copy and headings |
-| Muted text | `--muted` | `#8d8371` | `#8f8674` | Metadata and labels |
-| Hairline | `--line` | `#e5ddcb` | `#2c261d` | Dividers and field borders |
-| Fairway accent | `--accent` | `oklch(0.5 0.12 150)` | `oklch(0.7 0.12 150)` | Links, rules, focus, primary actions |
-| Danger | `--danger` | `oklch(0.52 0.19 31)` | `oklch(0.7 0.17 33)` | Errors only |
-| Warn | `--warn` | `oklch(0.55 0.16 60)` | `oklch(0.72 0.15 62)` | Semantic warning specimen |
-| Info | `--info` | `oklch(0.5 0.11 235)` | `oklch(0.72 0.11 235)` | Semantic information specimen |
-| Code panel | `--panel-code` | `#211b13` | `#211b13` | Code only |
-| Code ink | `--panel-code-ink` | `#ece3cd` | `#ece3cd` | Code only |
+| Role           | Token              | Light                 | Dark                   | Usage                                |
+| -------------- | ------------------ | --------------------- | ---------------------- | ------------------------------------ |
+| Page surface   | `--paper`          | `#f8f4ec`             | `#171410`              | Body and page background             |
+| Primary text   | `--ink`            | `#282218`             | `#e9e1cf`              | Body copy and headings               |
+| Muted text     | `--muted`          | `#8d8371`             | `#8f8674`              | Metadata and labels                  |
+| Hairline       | `--line`           | `#e5ddcb`             | `#2c261d`              | Dividers and field borders           |
+| Fairway accent | `--accent`         | `oklch(0.5 0.12 150)` | `oklch(0.7 0.12 150)`  | Links, rules, focus, primary actions |
+| Danger         | `--danger`         | `oklch(0.52 0.19 31)` | `oklch(0.7 0.17 33)`   | Errors only                          |
+| Warn           | `--warn`           | `oklch(0.55 0.16 60)` | `oklch(0.72 0.15 62)`  | Semantic warning specimen            |
+| Info           | `--info`           | `oklch(0.5 0.11 235)` | `oklch(0.72 0.11 235)` | Semantic information specimen        |
+| Code panel     | `--panel-code`     | `#211b13`             | `#211b13`              | Code only                            |
+| Code ink       | `--panel-code-ink` | `#ece3cd`             | `#ece3cd`              | Code only                            |
 
 Fairway is the only brand accent.
 Semantic danger, warning, and information colors appear only where their meaning requires them.
@@ -33,16 +33,16 @@ There are no gradients or shadows.
 
 ## 3. Typography
 
-| Level | Size | Weight | Line height | Tracking | Usage |
-| --- | --- | --- | --- | --- | --- |
-| Display | `42px` | 600 italic | `1.22` | `-0.015em` | Page introductions |
-| Title | `28px` | 600 | `1.22` | `-0.015em` | Page and post titles |
-| Heading | `21px` | 600 | `1.22` | `-0.015em` | Content headings |
-| Body | `17.5px` | 400 | `1.8` | normal | Editorial copy |
-| Small | `14px` | 400 | inherited | normal | Supporting copy |
-| Meta | `12px` | 400 | inherited | `0.04em` | Dates and locations |
-| Label | `11px` | 700 | inherited | `0.18em` | Uppercase labels and controls |
-| Micro | `10px` | 400 | inherited | `0.16em` | Table headings |
+| Level   | Size     | Weight     | Line height | Tracking   | Usage                         |
+| ------- | -------- | ---------- | ----------- | ---------- | ----------------------------- |
+| Display | `42px`   | 600 italic | `1.22`      | `-0.015em` | Page introductions            |
+| Title   | `28px`   | 600        | `1.22`      | `-0.015em` | Page and post titles          |
+| Heading | `21px`   | 600        | `1.22`      | `-0.015em` | Content headings              |
+| Body    | `17.5px` | 400        | `1.8`       | normal     | Editorial copy                |
+| Small   | `14px`   | 400        | inherited   | normal     | Supporting copy               |
+| Meta    | `12px`   | 400        | inherited   | `0.04em`   | Dates and locations           |
+| Label   | `11px`   | 700        | inherited   | `0.18em`   | Uppercase labels and controls |
+| Micro   | `10px`   | 400        | inherited   | `0.16em`   | Table headings                |
 
 The only font families are Literata for body and display text and Space Mono for labels, metadata, code, and form controls.
 
@@ -145,6 +145,6 @@ No shadows, gradients, texture, imagery, or decorative containers are used.
 
 ### Accepted Debt
 
-| Item | Location | Why accepted | Owner / Exit |
-| --- | --- | --- | --- |
+| Item                 | Location                             | Why accepted                                                                      | Owner / Exit                                                           |
+| -------------------- | ------------------------------------ | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | Remote GitHub avatar | `src/components/layout/Header.astro` | Preserves the approved source identity image without adding a third asset system. | Replace with a local optimized copy when offline delivery is required. |

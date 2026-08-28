@@ -13,6 +13,7 @@
 
 	syncThemeButton();
 	document.addEventListener("click", (event) => {
-		if (event.target instanceof Element && event.target.closest("theme-toggle button")) syncThemeButton();
+		if (event.target instanceof Element && event.target.closest("theme-toggle button"))
+			syncThemeButton();
 	});
 </script>

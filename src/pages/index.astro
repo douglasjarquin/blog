@@ -17,46 +17,65 @@ const latestNotes = (await getCollection("note"))
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-  <section class="section">
-    <h1>Hi there<span style="color: var(--accent)">!</span></h1>
-    <p class="lead">I'm Doug and this is my site. I write about web development, programming, and other things I'm interested in. Read <a href="/about/">about me</a> or see what I've been up to.</p>
-  </section>
+	<section class="section">
+		<h1>Hi there<span style="color: var(--accent)">!</span></h1>
+		<p class="lead">
+			I'm Doug and this is my site. I write about web development, programming, and other things I'm
+			interested in. Read <a href="/about/">about me</a> or see what I've been up to.
+		</p>
+	</section>
 
-  {pinnedPosts.length > 0 && (
-    <section class="section">
-      <SectionHeader title="Pinned" />
-      <div>
-        {pinnedPosts.map((post) => <PostPreview post={post} />)}
-      </div>
-    </section>
-  )}
+	{
+		pinnedPosts.length > 0 && (
+			<section class="section">
+				<SectionHeader title="Pinned" />
+				<div>
+					{pinnedPosts.map((post) => (
+						<PostPreview post={post} />
+					))}
+				</div>
+			</section>
+		)
+	}
 
-  <section class="section">
-    <SectionHeader title="Posts" href="/posts/" />
-    <div class="post-table-wrap">
-      <table class="post-table">
-        <caption>Recent rounds</caption>
-        <thead><tr><th>No.</th><th>Post</th><th>Date</th></tr></thead>
-        <tbody>
-          {latestPosts.map((post, index) => (
-            <tr>
-              <td>{String(index + 1).padStart(2, "0")}</td>
-              <td><a href={"/posts/" + post.id + "/"}>{post.data.title}</a></td>
-              <td><FormattedDate date={post.data.publishDate} /></td>
-            </tr>
-          ))}
-        </tbody>
-        <tfoot><tr><td>Out</td><td>{latestPosts.length} posts</td><td></td></tr></tfoot>
-      </table>
-    </div>
-  </section>
+	<section class="section">
+		<SectionHeader title="Posts" href="/posts/" />
+		<div class="post-table-wrap">
+			<table class="post-table">
+				<caption>Recent rounds</caption>
+				<thead><tr><th>No.</th><th>Post</th><th>Date</th></tr></thead>
+				<tbody>
+					{
+						latestPosts.map((post, index) => (
+							<tr>
+								<td>{String(index + 1).padStart(2, "0")}</td>
+								<td>
+									<a href={"/posts/" + post.id + "/"}>{post.data.title}</a>
+								</td>
+								<td>
+									<FormattedDate date={post.data.publishDate} />
+								</td>
+							</tr>
+						))
+					}
+				</tbody>
+				<tfoot><tr><td>Out</td><td>{latestPosts.length} posts</td><td></td></tr></tfoot>
+			</table>
+		</div>
+	</section>
 
-  {latestNotes.length > 0 && (
-    <section class="section">
-      <SectionHeader title="Notes" href="/notes/" />
-      <ul>
-        {latestNotes.map((note) => <li><Note note={note} as="h3" isPreview /></li>)}
-      </ul>
-    </section>
-  )}
+	{
+		latestNotes.length > 0 && (
+			<section class="section">
+				<SectionHeader title="Notes" href="/notes/" />
+				<ul>
+					{latestNotes.map((note) => (
+						<li>
+							<Note note={note} as="h3" isPreview />
+						</li>
+					))}
+				</ul>
+			</section>
+		)
+	}
 </PageLayout>
