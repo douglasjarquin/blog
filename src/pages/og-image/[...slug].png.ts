@@ -40,7 +40,18 @@ const markup = (title: string, pubDate: string) =>
 				</div>
 			</div>
 			<div tw="flex items-center justify-between w-full px-16 py-8 border-t-4 border-[#3f704d] text-xl">
-				<p tw="text-2xl tracking-widest text-[#3f704d]">■□■□■□■□■□</p>
+				<div tw="flex items-center">
+						<div tw="flex w-5 h-5 mr-2 border-2 border-[#3f704d] bg-[#3f704d]"></div>
+						<div tw="flex w-5 h-5 mr-2 border-2 border-[#3f704d]"></div>
+						<div tw="flex w-5 h-5 mr-2 border-2 border-[#3f704d] bg-[#3f704d]"></div>
+						<div tw="flex w-5 h-5 mr-2 border-2 border-[#3f704d]"></div>
+						<div tw="flex w-5 h-5 mr-2 border-2 border-[#3f704d] bg-[#3f704d]"></div>
+						<div tw="flex w-5 h-5 mr-2 border-2 border-[#3f704d]"></div>
+						<div tw="flex w-5 h-5 mr-2 border-2 border-[#3f704d] bg-[#3f704d]"></div>
+						<div tw="flex w-5 h-5 mr-2 border-2 border-[#3f704d]"></div>
+						<div tw="flex w-5 h-5 mr-2 border-2 border-[#3f704d] bg-[#3f704d]"></div>
+						<div tw="flex w-5 h-5 mr-2 border-2 border-[#3f704d]"></div>
+					</div>
 				<p tw="font-semibold">by ${siteConfig.author}</p>
 			</div>
 		</div>`;
