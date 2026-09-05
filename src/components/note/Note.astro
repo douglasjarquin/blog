@@ -12,35 +12,21 @@ const { as: Tag = "div", note, isPreview = false } = Astro.props;
 const { Content } = await render(note);
 ---
 
-<article
-	class:list={[isPreview && "bg-global-text/5 inline-grid rounded-md px-4 py-3"]}
-	data-pagefind-body={isPreview ? false : true}
->
-	<Tag class="title" class:list={{ "text-base": isPreview }}>
-		{
-			isPreview ? (
-				<a class="site-link" href={`/notes/${note.id}/`}>
-					{note.data.title}
-				</a>
-			) : (
-				<>{note.data.title}</>
-			)
-		}
+<article class:list={[isPreview && "note-preview"]} data-pagefind-body={isPreview ? false : true}>
+	<Tag>
+		{isPreview ? <a href={`/notes/${note.id}/`}>{note.data.title}</a> : <>{note.data.title}</>}
 	</Tag>
 	<FormattedDate
 		dateTimeOptions={{
 			hour: "2-digit",
 			minute: "2-digit",
-			year: "2-digit",
+			year: "numeric",
 			month: "2-digit",
 			day: "2-digit",
 		}}
 		date={note.data.publishDate}
 	/>
-	<div
-		class="prose prose-sm mt-4 max-w-none [&>p:last-of-type]:mb-0"
-		class:list={{ "line-clamp-6": isPreview }}
-	>
+	<div class="note-copy">
 		<Content />
 	</div>
 </article>

@@ -1,71 +1,74 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import PostPreview from "@/components/blog/PostPreview.astro";
+import FormattedDate from "@/components/FormattedDate.astro";
 import Note from "@/components/note/Note.astro";
-import SocialList from "@/components/SocialList.astro";
+import SectionHeader from "@/components/theme/SectionHeader.astro";
 import { getAllPosts } from "@/data/post";
 import PageLayout from "@/layouts/Base.astro";
 import { collectionDateSort } from "@/utils/date";
 
-// Posts
-const MAX_POSTS = 10;
-const allPosts = await getAllPosts();
-const allPostsByDate = allPosts.sort(collectionDateSort) as CollectionEntry<"post">[];
-const latestPosts = allPostsByDate.slice(0, MAX_POSTS);
-
-// Pinned Posts, set to a max of 3;
-const MAX_PINNED_POSTS = 3;
-const pinnedPosts = allPostsByDate.filter((p) => p.data.pinned).slice(0, MAX_PINNED_POSTS);
-
-// Notes
-const MAX_NOTES = 5;
-const allNotes = await getCollection("note");
-const latestNotes = allNotes
+const allPosts = (await getAllPosts()).sort(collectionDateSort) as CollectionEntry<"post">[];
+const latestPosts = allPosts.slice(0, 5);
+const pinnedPosts = allPosts.filter((post) => post.data.pinned).slice(0, 3);
+const latestNotes = (await getCollection("note"))
 	.sort(collectionDateSort)
-	.slice(0, MAX_NOTES) as CollectionEntry<"note">[];
+	.slice(0, 3) as CollectionEntry<"note">[];
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-	<section>
-		<h1 class="title mb-12">Hi there!</h1>
-		<p class="mb-4">
-		  I'm Doug and this is my site. I write about web development, programming, and other things I'm interested in. Learn more about me or browse my posts to see what I've been up to.
+	<section class="section">
+		<h1>Hi there<span style="color: var(--accent)">!</span></h1>
+		<p class="lead">
+			I'm Doug and this is my site. I write about web development, programming, and other things I'm
+			interested in. Read <a href="/about/">about me</a> or see what I've been up to.
 		</p>
-		<SocialList />
 	</section>
+
 	{
 		pinnedPosts.length > 0 && (
-			<section class="mt-16">
-				<h2 class="title mb-6 text-xl">Pinned Posts</h2>
-				<ul class="space-y-4" role="list">
-					{pinnedPosts.map((p) => (
-						<li class="grid gap-1 sm:grid-cols-[auto_1fr]">
-							<PostPreview post={p} />
-						</li>
+			<section class="section">
+				<SectionHeader title="Pinned" />
+				<div>
+					{pinnedPosts.map((post) => (
+						<PostPreview post={post} />
 					))}
-				</ul>
+				</div>
 			</section>
 		)
 	}
-	<section class="mt-16">
-		<h2 class="title text-accent mb-6 text-xl"><a href="/posts/">Posts</a></h2>
-		<ul class="space-y-4" role="list">
-			{
-				latestPosts.map((p) => (
-					<li class="grid gap-1 sm:grid-cols-[auto_1fr]">
-						<PostPreview post={p} />
-					</li>
-				))
-			}
-		</ul>
+
+	<section class="section">
+		<SectionHeader title="Posts" href="/posts/" />
+		<div class="post-table-wrap">
+			<table class="post-table">
+				<caption>Recent rounds</caption>
+				<thead><tr><th>No.</th><th>Post</th><th>Date</th></tr></thead>
+				<tbody>
+					{
+						latestPosts.map((post, index) => (
+							<tr>
+								<td>{String(index + 1).padStart(2, "0")}</td>
+								<td>
+									<a href={"/posts/" + post.id + "/"}>{post.data.title}</a>
+								</td>
+								<td>
+									<FormattedDate date={post.data.publishDate} />
+								</td>
+							</tr>
+						))
+					}
+				</tbody>
+				<tfoot><tr><td>Out</td><td>{latestPosts.length} posts</td><td></td></tr></tfoot>
+			</table>
+		</div>
 	</section>
+
 	{
 		latestNotes.length > 0 && (
-			<section class="mt-16">
-				<h2 class="title text-accent mb-6 text-xl">
-					<a href="/notes/">Notes</a>
-				</h2>
-				<ul class="space-y-6" role="list">
+			<section class="section">
+				<SectionHeader title="Notes" href="/notes/" />
+				<ul>
 					{latestNotes.map((note) => (
 						<li>
 							<Note note={note} as="h3" isPreview />

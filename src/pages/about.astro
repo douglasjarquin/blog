@@ -1,29 +1,33 @@
 ---
+import SectionHeader from "@/components/theme/SectionHeader.astro";
 import PageLayout from "@/layouts/Base.astro";
-
-	const meta = {
-		description: "About Douglas Jarquin — Director of DevOps at Zumba Fitness, based in Davie, FL.",
-		title: "About",
-	};
 ---
 
-<PageLayout meta={meta}>
-	<h1 class="title mb-12">About</h1>
-	<div class="prose prose-sm max-w-none">
-		<p>
-		  I'm Douglas Jarquin. I live in Davie, FL, where I wrangle servers and code.
+<PageLayout meta={{ description: "A little about Doug", title: "About" }}>
+	<section class="section">
+		<h1>About</h1>
+		<p class="lead">
+			I'm Doug — an engineer at Zumba, living in Davie, Florida. I like building small, sharp tools,
+			mostly for macOS and the terminal, and writing about what I learn along the way.
 		</p>
+	</section>
+	<section class="section">
+		<SectionHeader title="Now" />
+		<dl>
+			<dt>Watching</dt><dd>Formula 1 — forza Ferrari</dd>
+			<dt>Playing</dt><dd>Golf</dd>
+			<dt>Building</dt><dd>
+				<a href="https://github.com/douglasjarquin/pinchos">pinchos</a>, a declarative menu bar for
+				macOS
+			</dd>
+		</dl>
+	</section>
+	<section class="section">
+		<SectionHeader title="Elsewhere" />
 		<p>
-      I’ve loved solving technical puzzles for as long as I can remember. I started my career configuring CAD systems for a machine shop, where I learned the importance of making technology work seamlessly with complex processes.
-    </p>
-    <p>
-      My passion for helping people and scaling systems really took off in 2004, when I moved on to building websites for client. I loved the challenge of ensuring uptime and performance, even during unexpected traffic spikes, and it sort of become my niche.
-    </p>
-    <p>
-      Today, I’m the Director of DevOps at Zumba Fitness, where I lead a team of engineers and operations professionals to ensure the smooth operation of our global platform.
-    </p>
-    <p>
-      My journey has always been about finding elegant solutions to technical challenges — and geniunely excited to wake up and tackle new challenges every day.
-    </p>
-	</div>
+			<a href="https://github.com/douglasjarquin">GitHub</a> · <a
+				href="https://www.linkedin.com/in/douglasjarquin/">LinkedIn</a
+			> · <a href="https://x.com/douglasjarquin">X</a>
+		</p>
+	</section>
 </PageLayout>

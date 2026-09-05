@@ -34,7 +34,7 @@ export default defineConfig({
 		webmanifest({
 			// See: https://github.com/alextim/astro-lib/blob/main/packages/astro-webmanifest/README.md
 			name: siteConfig.title,
-			short_name: "Doug",
+			short_name: "Doug Blog", // optional
 			description: siteConfig.description,
 			lang: siteConfig.lang,
 			icon: "public/icon.svg", // the source for generating favicon & icons
@@ -56,8 +56,8 @@ export default defineConfig({
 				},
 			],
 			start_url: "/",
-			background_color: "#1d1f21",
-			theme_color: "#2bbc8a",
+			background_color: "#f8f4ec",
+			theme_color: "#3f704d",
 			display: "standalone",
 			config: {
 				insertFaviconLinks: false,
