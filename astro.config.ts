@@ -27,10 +27,6 @@ export default defineConfig({
 			status: 301,
 			destination: "/uses/",
 		},
-		"/tools/": {
-			status: 301,
-			destination: "/uses/",
-		},
 	},
 	image: {
 		domains: ["webmention.io"],
