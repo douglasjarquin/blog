@@ -22,6 +22,12 @@ import { expressiveCodeOptions, siteConfig } from "./src/site.config";
 // https://astro.build/config
 export default defineConfig({
 	site: siteConfig.url,
+	redirects: {
+		"/tools": {
+			status: 301,
+			destination: "/uses/",
+		},
+	},
 	image: {
 		domains: ["webmention.io"],
 	},

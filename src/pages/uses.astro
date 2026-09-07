@@ -1,0 +1,133 @@
+---
+import Card from "@/components/theme/Card.astro";
+import SectionHeader from "@/components/theme/SectionHeader.astro";
+import PageLayout from "@/layouts/Base.astro";
+---
+
+<PageLayout
+	meta={{
+		description: "These are my tools, there are many like them but these are my own.",
+		title: "Uses",
+	}}
+>
+	<section class="section">
+		<h1>Uses</h1>
+		<p class="lead">These are my tools, there are many like them but these are my own.</p>
+		<p class="meta">
+			<em>Last updated: <time datetime="2026-09-07">2026-09-07</time> (ET)</em>
+		</p>
+	</section>
+	<section class="section">
+		<SectionHeader title="Computer" />
+		<dl>
+			<dt>Machine</dt><dd>MacBook Pro 16</dd>
+			<dt>Phone</dt><dd>iPhone Air</dd>
+			<dt>Watch</dt><dd>Apple Watch Ultra 3 for workouts; Casio G-Shock daily driver</dd>
+		</dl>
+	</section>
+	<section class="section">
+		<SectionHeader title="Desk" />
+		<dl>
+			<dt>Desk</dt><dd>Salli Saddle</dd>
+			<dt>Monitor</dt><dd>4K Sony TV</dd>
+			<dt>Keyboard</dt><dd>Laptop keyboard and trackpad. Saves desk space.</dd>
+			<dt>Dock</dt><dd>Razer Thunderbolt 4 hub</dd>
+			<dt>Headphones</dt><dd>Sony MDR-7506; Apple AirPods Max</dd>
+		</dl>
+	</section>
+	<section class="section">
+		<SectionHeader title="Editor + terminal" />
+		<dl>
+			<dt>Editor</dt><dd>nvim</dd>
+			<dt>Terminal</dt><dd>wezterm</dd>
+			<dt>Shell</dt><dd>zsh</dd>
+			<dt>Font</dt><dd>GitHub Monaspace Argo</dd>
+			<dt>Dotfiles</dt><dd>private</dd>
+			<dt>Prompt</dt><dd>Starship</dd>
+		</dl>
+	</section>
+	<section class="section">
+		<SectionHeader title="Browser" />
+		<dl>
+			<dt>Browser</dt><dd>Safari</dd>
+			<dt>Extensions</dt><dd>1Password</dd>
+		</dl>
+	</section>
+	<section class="section">
+		<SectionHeader title="AI" />
+		<dl>
+			<dt>Chat</dt><dd>ChatGPT</dd>
+			<dt>Agents</dt><dd>Codex, Grok, Cursor</dd>
+			<dt>Local</dt><dd>None yet. Still developing my opinion on this.</dd>
+			<dt>Notes</dt><dd>Grok Bot</dd>
+		</dl>
+	</section>
+	<section class="section">
+		<SectionHeader title="Productivity" />
+		<dl>
+			<dt>Tasks</dt><dd>Apple Reminders</dd>
+			<dt>Calendar</dt><dd>Apple Calendar</dd>
+			<dt>Notes</dt><dd>Apple Notes</dd>
+			<dt>Launcher</dt><dd>terminal (<code>open -A "APPNAME"</code>)</dd>
+			<dt>Clipboard</dt><dd>
+				<a href="https://samirpatil2000.github.io/products/buffer/">Buffer</a>,
+				<a href="https://rectangleapp.com">Rectangle</a>
+			</dd>
+			<dt>Passwords</dt><dd>1Password</dd>
+		</dl>
+		<Card dashed>
+			<p>Playing with <a href="https://www.automicvault.com">Automic Vault</a>.</p>
+		</Card>
+	</section>
+	<section class="section">
+		<SectionHeader title="Communication" />
+		<dl>
+			<dt>Mail</dt><dd>Mail, Gmail</dd>
+			<dt>Chat</dt><dd>Slack for work. None otherwise.</dd>
+		</dl>
+	</section>
+	<section class="section">
+		<SectionHeader title="Creative" />
+		<dl>
+			<dt>Music</dt><dd>Apple Music</dd>
+			<dt>Podcasts</dt><dd>Apple Podcasts</dd>
+			<dt>Photos</dt><dd>Apple Photos</dd>
+			<dt>Design</dt><dd>Figma</dd>
+			<dt>Making</dt><dd>Logic Pro</dd>
+		</dl>
+	</section>
+	<section class="section">
+		<SectionHeader title="Dev" />
+		<dl>
+			<dt>Git</dt><dd>GitHub</dd>
+			<dt>Packages</dt><dd>Homebrew, aube</dd>
+			<dt>Runtime</dt><dd>mise</dd>
+			<dt>Containers</dt><dd>OrbStack / Docker</dd>
+			<dt>Hosting</dt><dd>Cloudflare, Railway</dd>
+		</dl>
+	</section>
+	<section class="section">
+		<SectionHeader title="Mac utilities" />
+		<dl>
+			<dt>pinchos</dt><dd>
+				<a href="https://github.com/douglasjarquin/pinchos">pinchos</a>, a declarative menu bar for
+				macOS
+			</dd>
+		</dl>
+	</section>
+	<section class="section">
+		<SectionHeader title="Abandoned" />
+		<dl>
+			<dt>Maccy</dt><dd>Found it buggy.</dd>
+			<dt>Aerospace</dt><dd>Didn't work well with all programs (Chrome / Apple TV).</dd>
+		</dl>
+	</section>
+	<section class="section">
+		<Card dashed>
+			<p>
+				A 2024 snapshot lives in
+				<a href="/posts/2025/01/01/default-apps/">My default apps of 2024</a>.
+			</p>
+		</Card>
+	</section>
+</PageLayout>
