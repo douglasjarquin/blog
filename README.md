@@ -1,10 +1,10 @@
 # douglasjarquin.com
 
-Personal site of [Douglas Jarquin](https://www.douglasjarquin.com/) — posts, notes, and an about page. Built with [Astro](https://astro.build) 5 and [Tailwind CSS](https://tailwindcss.com) 4, deployed to Cloudflare.
+Personal site of [Douglas Jarquin](https://www.douglasjarquin.com/) — posts, notes, and an about page. Built with [Astro](https://astro.build) 7 and [Tailwind CSS](https://tailwindcss.com) 4, deployed to Cloudflare.
 
 ## Stack
 
-- Astro 5 with MD/MDX content collections (posts, notes, tags)
+- Astro 7 with MD/MDX content collections (posts, notes, tags)
 - Tailwind CSS 4, light and dark mode
 - [Pagefind](https://pagefind.app/) static search
 - [Expressive Code](https://expressive-code.com/) for syntax highlighting
@@ -13,7 +13,7 @@ Personal site of [Douglas Jarquin](https://www.douglasjarquin.com/) — posts, n
 
 ## Commands
 
-Requires Node 22 and pnpm.
+Requires Node 22.12.0 or later and pnpm.
 
 | Command         | Action                                              |
 | :-------------- | :-------------------------------------------------- |
