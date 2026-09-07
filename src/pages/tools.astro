@@ -1,0 +1,72 @@
+---
+import Card from "@/components/theme/Card.astro";
+import SectionHeader from "@/components/theme/SectionHeader.astro";
+import PageLayout from "@/layouts/Base.astro";
+---
+
+<PageLayout meta={{ description: "The apps and tools I actually use", title: "Tools" }}>
+	<section class="section">
+		<h1>Tools</h1>
+		<p class="lead">
+			What I reach for on the machine. I also build
+			<a href="https://github.com/douglasjarquin/pinchos">pinchos</a>, a declarative menu bar for
+			macOS.
+		</p>
+	</section>
+	<section class="section">
+		<SectionHeader title="Workbench" />
+		<dl>
+			<dt>Editor</dt><dd>
+				<a href="https://code.visualstudio.com">Visual Studio Code</a>, migrating to
+				<a href="https://neovim.io">Neovim</a>
+			</dd>
+			<dt>Terminal</dt><dd>
+				<a href="https://wezfurlong.org/wezterm/index.html">Wezterm</a>
+			</dd>
+			<dt>Passwords</dt><dd>
+				<a href="https://1password.com">1Password</a>
+			</dd>
+			<dt>AI</dt><dd>
+				<a href="https://msty.app">Msty</a>
+			</dd>
+			<dt>Search</dt><dd>
+				<a href="https://www.perplexity.ai">Perplexity</a>
+			</dd>
+		</dl>
+	</section>
+	<section class="section">
+		<SectionHeader title="Defaults" />
+		<div class="post-table-wrap">
+			<table>
+				<caption>2024 defaults</caption>
+				<thead>
+					<tr><th>Category</th><th>App</th></tr>
+				</thead>
+				<tbody>
+					<tr><td>Mail</td><td>Gmail, Protonmail, Apple Mail</td></tr>
+					<tr><td>Tasks</td><td>Apple Reminders</td></tr>
+					<tr><td>Launcher</td><td><code>open -a</code></td></tr>
+					<tr><td>Browser</td><td>Safari, Chrome (for work)</td></tr>
+					<tr><td>Calendar</td><td>Apple Calendar</td></tr>
+					<tr><td>Notes</td><td>Apple Notes</td></tr>
+					<tr><td>Photos</td><td>Apple Photos</td></tr>
+					<tr><td>Cloud</td><td>iCloud</td></tr>
+					<tr><td>Music</td><td>Apple Music, YouTube Music, Spotify</td></tr>
+					<tr><td>Clipboard</td><td>
+						<a href="https://tapbots.com/pastebot/">Pastebot</a>
+					</td></tr>
+					<tr><td>Budgeting</td><td>
+						<a href="https://copilot.money">Copilot</a>
+					</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<Card dashed>
+			<p>
+				The year-over-year list is in
+				<a href="/posts/2025/01/01/default-apps/">My default apps of 2024</a>. Last updated 1 Jan
+				2025.
+			</p>
+		</Card>
+	</section>
+</PageLayout>

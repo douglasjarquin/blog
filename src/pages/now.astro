@@ -1,0 +1,26 @@
+---
+import SectionHeader from "@/components/theme/SectionHeader.astro";
+import PageLayout from "@/layouts/Base.astro";
+---
+
+<PageLayout meta={{ description: "What I'm on lately", title: "Now" }}>
+	<section class="section">
+		<h1>Now</h1>
+		<p class="lead">
+			What I'm watching, playing, and building. The short version also lives on
+			<a href="/about/">About</a>.
+		</p>
+		<p class="meta"><em>Last updated: [boss fill-in]</em></p>
+	</section>
+	<section class="section">
+		<SectionHeader title="On lately" />
+		<dl>
+			<dt>Watching</dt><dd>Formula 1 — forza Ferrari</dd>
+			<dt>Playing</dt><dd>Golf</dd>
+			<dt>Building</dt><dd>
+				<a href="https://github.com/douglasjarquin/pinchos">pinchos</a>, a declarative menu bar for
+				macOS
+			</dd>
+		</dl>
+	</section>
+</PageLayout>
