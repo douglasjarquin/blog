@@ -122,7 +122,6 @@ The only layout mechanics outside the scale are intrinsic grid and flex sizing n
 
 The theme uses `0.2s ease` for color and border changes and `0.18s ease` for the small post-row hover slide.
 Quote typography uses `--text-quote: 19px` and `--leading-quote: 1.7`.
-The theme toggle uses a `0.25s` background fade.
 Only transforms, opacity, and color-like properties animate.
 `prefers-reduced-motion: reduce` disables transitions and movement.
 
