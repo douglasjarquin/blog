@@ -631,6 +631,13 @@ address {
 .section-header a:hover {
 	color: var(--accent);
 }
+.profile-photo {
+	display: block;
+	width: 120px;
+	height: 120px;
+	margin: 0 0 var(--space-5);
+	object-fit: cover;
+}
 .lead {
 	font-size: 18px;
 }

@@ -1,10 +1,19 @@
 ---
 import SectionHeader from "@/components/theme/SectionHeader.astro";
 import PageLayout from "@/layouts/Base.astro";
+import { siteConfig } from "@/site.config";
 ---
 
 <PageLayout meta={{ description: "A little about Doug", title: "About" }}>
 	<section class="section">
+		{/* Canonical portrait lives at public/profile.jpg — copy as-is; do not recompress. */}
+		<img
+			alt={siteConfig.author}
+			class="profile-photo"
+			height="1408"
+			src="/profile.jpg"
+			width="1408"
+		/>
 		<h1>About</h1>
 		<p class="lead">
 			I'm Doug — an engineer at Zumba, living in Davie, Florida. I like building small, sharp tools,
