@@ -49,6 +49,10 @@ export const menuLinks: { path: string; title: string }[] = [
 		path: "/notes/",
 		title: "Notes",
 	},
+	{
+		path: "https://douglasjarquin.github.io/sf2-themes/",
+		title: "sf2-themes",
+	},
 ];
 
 // https://expressive-code.com/reference/configuration/
