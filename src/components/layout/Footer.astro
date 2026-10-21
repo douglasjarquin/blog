@@ -6,9 +6,9 @@ const year = new Date().getFullYear();
 
 <footer class="site-footer">
 	<div class="footer-row">
-		<span>&copy; {siteConfig.author} {year} · Davie, FL</span>
 		<nav aria-label="Footer links" class="footer-links">
 			{menuLinks.map((link) => <a href={link.path}>{link.title}</a>)}
 		</nav>
+		<span>&copy; {siteConfig.author} {year} · Davie, FL</span>
 	</div>
 </footer>
