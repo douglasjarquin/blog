@@ -39,7 +39,7 @@ As I move into 2025 with some new or improved processes, I wanted to take a minu
 | Social                   | n/a                                                                              | n/a                                                              |
 | Screenshots              | macOS                                                                            | macOS                                                            |
 | Notes                    | Apple Notes                                                                      | Apple Notes                                                      |
-| Code editor              | [Visual Studio Code](https://code.visualstudio.com), [Nevoim](https://neovim.io) | [Visual Studio Code](https://code.visualstudio.com)              |
+| Code editor              | [Visual Studio Code](https://code.visualstudio.com), [Neovim](https://neovim.io) | [Visual Studio Code](https://code.visualstudio.com)              |
 | Terminal                 | [Wezterm](https://wezfurlong.org/wezterm/index.html)                             | Apple Terminal                                                   |
 | Search                   | [Perplexity](https://www.perplexity.ai)                                          | Google                                                           |
 | Flight tracking          | n/a                                                                              | n/a                                                              |
@@ -57,7 +57,7 @@ Let's go over notable changes.
 - In the second half of 2024 I started spending more time in my terminal, favoring TUIs over GUIs. Around that time I upgraded my laptop and lost an Automator script I wrote to launch my most used apps at the same time. I called it "Good Morning" and it was the first thing I launched after logging into my machine. Instead of rewriting that in Automator, I decided to write a simple zsh function that uses `open -a` and an array.
 - I make music, and this year I decided to subscribe to the major streaming services to be able to listen to my music. Yes, it sounds different. YouTube is the worst, and Apple Lossless is the best.
 - I've used emacs (via Spacemacs), Textmate, and tons of other editors in the past. While VS Code has been my main for like 3 years, I've been struggling with the context switch of vim on my remote servers. I started a migration to Neovim this year, and plan to be off of VS Code by 2026.
-- With my increased time in the terminal mentioned above, I did invest some time searching for a good emulator. The Apple Terminal is great, but hasn't gotten any love in recent upgrades. Wezterm won out over Ghost and Alacritty (which are also amazing) because of it's built-in multiplexer and easy lua based config.
+- With my increased time in the terminal mentioned above, I did invest some time searching for a good emulator. The Apple Terminal is great, but hasn't gotten any love in recent upgrades. Wezterm won out over Ghostty and Alacritty (which are also amazing) because of it's built-in multiplexer and easy lua based config.
 - I've been spending more time experimenting with AI, going as far as running my own models via ollama in the second half of 2023. To give me a "single-pane", I've been using Msty. My openai and llama chats sit side-by-side.
 
 Happy new year!
