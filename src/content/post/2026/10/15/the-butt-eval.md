@@ -26,7 +26,7 @@ You can just try the models. That's it. That's the whole post.
 
 There's a tendency – especially among developers who care about rigor – to treat informal testing as not counting. It's like unless you've got a proper eval harness with 500 labeled examples and a scoring function, you're not actually learning anything. That's backwards.
 
-Your seat-of-the-pants impression of a model is data. When Opus 5.5 gives you a better answer than GPT-6 Luna on the same prompt (or the reverse – it goes both ways, depending on what you're asking), that observation happened. You were there. The quality difference isn't hypothetical; you saw it.
+Your seat-of-the-pants impression of a model is data. When Opus 5.5 gives you a better answer than ChatGPT Luna 6 on the same prompt (or the reverse – it goes both ways, depending on what you're asking), that observation happened. You were there. The quality difference isn't hypothetical; you saw it.
 
 The problem isn't that informal testing is inaccurate. The problem is that it's often too narrow. You run one prompt, one time, and think you know something. That's like taking a car around a parking lot (at 15 mph, with the AC on) and pronouncing judgment on its high-speed handling. The butt eval works – you just need enough reps for the pattern to emerge.
 
@@ -52,6 +52,6 @@ No benchmark tells you which of those trade-offs matter for your situation. Only
 
 Look, formal evals are important – I'm not arguing otherwise. If you're choosing a model for a production system (or evaluating whether to switch after a new release), you want more than vibes. You want labeled test data, reproducible runs, maybe human review on a sample. I'll get into what that looks like in a follow-up.
 
-If you're earlier in the process – figuring out whether GPT-6 Luna or Opus 5.5 is a better fit for what you're building – you don't have to wait for a formal eval setup to start learning. The eval infrastructure comes later. The learning starts now, with you, running prompts.
+If you're earlier in the process – figuring out whether ChatGPT Luna 6 or Opus 5.5 is a better fit for what you're building – you don't have to wait for a formal eval setup to start learning. The eval infrastructure comes later. The learning starts now, with you, running prompts.
 
 Start driving. Your butt already knows more than you think.
