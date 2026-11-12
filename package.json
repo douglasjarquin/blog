@@ -14,20 +14,20 @@
 		"format": "prettier -w . --cache"
 	},
 	"dependencies": {
-		"@astrojs/markdown-remark": "^7.3.5",
-		"@astrojs/mdx": "8.1.2",
+		"@astrojs/markdown-remark": "^7.3.8",
+		"@astrojs/mdx": "8.1.5",
 		"@astrojs/rss": "4.0.19",
 		"@astrojs/sitemap": "3.7.4",
 		"@tailwindcss/vite": "4.3.3",
-		"astro": "7.4.4",
+		"astro": "7.4.11",
 		"astro-expressive-code": "^0.44.3",
 		"astro-icon": "^1.2.0",
 		"astro-robots-txt": "^1.0.0",
 		"astro-webmanifest": "^1.0.0",
 		"cssnano": "^9.1.0",
 		"hastscript": "^9.0.0",
-		"mdast-util-directive": "^3.1.1",
-		"mdast-util-to-markdown": "^2.2.1",
+		"mdast-util-directive": "^3.2.0",
+		"mdast-util-to-markdown": "^2.2.3",
 		"mdast-util-to-string": "^4.0.0",
 		"rehype-autolink-headings": "^7.1.0",
 		"rehype-external-links": "^3.0.0",
@@ -40,11 +40,11 @@
 		"unist-util-visit": "^5.2.0"
 	},
 	"engines": {
-		"node": ">=22.12.0"
+		"node": ">=22.23.4"
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.9.12",
-		"@biomejs/biome": "^2.6.4",
+		"@biomejs/biome": "^2.6.7",
 		"@iconify-json/mdi": "^1.2.2",
 		"@pagefind/default-ui": "^1.5.2",
 		"@resvg/resvg-js": "^2.6.2",
@@ -53,7 +53,7 @@
 		"@types/mdast": "^4.0.4",
 		"autoprefixer": "^10.6.2",
 		"pagefind": "^1.5.2",
-		"prettier": "^3.9.10",
+		"prettier": "^3.10.0",
 		"prettier-plugin-astro": "1.1.2",
 		"prettier-plugin-tailwindcss": "^0.8.1",
 		"reading-time": "^1.5.0",
@@ -64,6 +64,13 @@
 		"onlyBuiltDependencies": ["@biomejs/biome", "@tailwindcss/oxide", "esbuild", "sharp"],
 		"overrides": {
 			"sharp": "^0.35.5"
+		},
+		"packageExtensions": {
+			"@astrojs/astro2tsx": {
+				"dependencies": {
+					"@emnapi/runtime": "1.11.3"
+				}
+			}
 		}
 	},
 	"overrides": {
