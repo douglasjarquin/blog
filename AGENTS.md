@@ -13,7 +13,7 @@ Personal site of Douglas Jarquin — posts, notes, and an about page. Built with
 
 ## Commands
 
-Requires Node 22.12.0 or later and pnpm.
+Requires Node 22.23.4 or later and pnpm.
 
 | Command         | Action                                              |
 | :-------------- | :-------------------------------------------------- |
