@@ -2,6 +2,8 @@
 import { type CollectionEntry, render } from "astro:content";
 import WebMentions from "@/components/blog/webmentions/index.astro";
 import FormattedDate from "@/components/FormattedDate.astro";
+import { markdownPath } from "@/data/markdown";
+import { postStructuredData } from "@/utils/structuredData";
 import BaseLayout from "./Base.astro";
 
 interface Props {
@@ -14,9 +16,11 @@ const socialImage = ogImage ?? "/social-card.png";
 const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString();
 const { remarkPluginFrontmatter } = await render(post);
 const readingTime: string = remarkPluginFrontmatter.readingTime;
+const jsonLd = postStructuredData(post);
+const markdownUrl = markdownPath(`/posts/${post.id}/`);
 ---
 
-<BaseLayout meta={{ articleDate, description, ogImage: socialImage, title }}>
+<BaseLayout meta={{ articleDate, description, jsonLd, markdownUrl, ogImage: socialImage, title }}>
 	<article class="post-content" data-pagefind-body>
 		<a class="back-link" href="/posts/">← All posts</a>
 		<header class="post-header">
