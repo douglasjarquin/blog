@@ -10,7 +10,7 @@ Everyone thinks constraints are the enemy. More money, more time, more options â
 
 That's not how it works.
 
-The best creative work in history came out of brutal limitations. The sonnet has 14 lines. Haiku has 17 syllables. Hemingway bet someone he could write a novel in six words and won ("For sale: baby shoes, never worn."). Twitter's 140-character limit (now 280, and somehow worse) trained an entire generation to cut the fat out of their writing.
+The best creative work in history came out of brutal limitations. The sonnet has 14 lines. Haiku has 17 syllables. A six-word story often pinned on Hemingway ("For sale: baby shoes, never worn.") still does the job. Twitter's 140-character limit (now 280, and somehow worse) trained an entire generation to cut the fat out of their writing.
 
 None of that would've happened with a blank page and unlimited room.
 
