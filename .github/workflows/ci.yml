@@ -40,3 +40,7 @@ jobs:
         # ensure build works
       - name: Run Astro build
         run: pnpm build
+
+        # Unicode and "_" slugs must still yield a schema-valid AI Catalog
+      - name: Test AI Catalog identifiers with fixture slugs
+        run: pnpm test:catalog

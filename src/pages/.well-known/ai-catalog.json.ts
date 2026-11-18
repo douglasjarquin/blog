@@ -4,25 +4,20 @@ import { markdownPath } from "@/data/markdown";
 import { getAllPosts } from "@/data/post";
 import { siteConfig } from "@/site.config";
 import { collectionDateSort } from "@/utils/date";
-
-/**
- * ARD identifiers allow only [A-Za-z0-9._-] inside each ":"-separated segment.
- * Nested content IDs such as "2026/11/12/positive-constraints" become one segment per path part.
- */
-const urnSegments = (id: string) => id.split("/").join(":");
+import { urnSegments } from "@/utils/urn";
 
 /** AgentReady AR-FIND-04: one manifest of the agent-facing resources this site ships. */
 export const GET: APIRoute = async ({ site }) => {
 	const url = (path: string) => new URL(path, site).href;
 	const host = new URL(siteConfig.url).hostname;
 	const entry = (
-		id: string,
+		segments: string[],
 		displayName: string,
 		type: string,
 		path: string,
 		description: string,
 	) => ({
-		identifier: `urn:air:${host}:${urnSegments(id)}`,
+		identifier: `urn:air:${host}:${urnSegments(...segments)}`,
 		displayName,
 		type,
 		url: url(path),
@@ -35,7 +30,7 @@ export const GET: APIRoute = async ({ site }) => {
 		...notes.map((note) => ({ kind: "note", entry: note, path: `/notes/${note.id}/` })),
 	].map(({ kind, entry: { id, data }, path }) =>
 		entry(
-			`${kind}:${id}`,
+			[kind, id],
 			data.title,
 			"text/markdown",
 			markdownPath(path),
@@ -47,28 +42,28 @@ export const GET: APIRoute = async ({ site }) => {
 		host: { displayName: siteConfig.title, documentationUrl: url("/about/") },
 		entries: [
 			entry(
-				"docs:llms-txt",
+				["docs", "llms-txt"],
 				"llms.txt",
-				"text/markdown",
+				"text/plain",
 				"/llms.txt",
 				"Described index of the site's pages, posts, and notes.",
 			),
 			entry(
-				"feed:posts",
+				["feed", "posts"],
 				"Posts feed",
 				"application/rss+xml",
 				"/rss.xml",
 				"RSS feed of published posts.",
 			),
 			entry(
-				"feed:notes",
+				["feed", "notes"],
 				"Notes feed",
 				"application/rss+xml",
 				"/notes/rss.xml",
 				"RSS feed of notes.",
 			),
 			entry(
-				"index:sitemap",
+				["index", "sitemap"],
 				"Sitemap",
 				"application/xml",
 				"/sitemap-index.xml",
