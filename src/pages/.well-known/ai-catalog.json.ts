@@ -5,6 +5,12 @@ import { getAllPosts } from "@/data/post";
 import { siteConfig } from "@/site.config";
 import { collectionDateSort } from "@/utils/date";
 
+/**
+ * ARD identifiers allow only [A-Za-z0-9._-] inside each ":"-separated segment.
+ * Nested content IDs such as "2026/11/12/positive-constraints" become one segment per path part.
+ */
+const urnSegments = (id: string) => id.split("/").join(":");
+
 /** AgentReady AR-FIND-04: one manifest of the agent-facing resources this site ships. */
 export const GET: APIRoute = async ({ site }) => {
 	const url = (path: string) => new URL(path, site).href;
@@ -16,7 +22,7 @@ export const GET: APIRoute = async ({ site }) => {
 		path: string,
 		description: string,
 	) => ({
-		identifier: `urn:air:${host}:${id}`,
+		identifier: `urn:air:${host}:${urnSegments(id)}`,
 		displayName,
 		type,
 		url: url(path),
