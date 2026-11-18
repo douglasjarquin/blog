@@ -75,7 +75,7 @@ const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url
 <link href="/notes/rss.xml" title="Notes" rel="alternate" type="application/rss+xml" />
 
 {/* Agent discovery (AgentReady AR-READ-06/07/09, AR-FIND-04) */}
-<link href="/llms.txt" title="llms.txt" rel="alternate" type="text/markdown" />
+<link href="/llms.txt" rel="llms-txt" type="text/plain" />
 <link href="/.well-known/ai-catalog.json" rel="ai-catalog" type="application/json" />
 {markdownUrl && <link href={markdownUrl} rel="alternate" type="text/markdown" />}
 
