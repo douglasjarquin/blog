@@ -20,6 +20,10 @@ export interface PaginationLink {
 export interface SiteMeta {
 	articleDate?: string | undefined;
 	description?: string;
+	/** Schema.org data rendered as an inline JSON-LD script */
+	jsonLd?: object | undefined;
+	/** Path of this page's Markdown mirror, advertised as rel="alternate" */
+	markdownUrl?: string | undefined;
 	ogImage?: string | undefined;
 	title: string;
 }

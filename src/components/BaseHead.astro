@@ -2,11 +2,12 @@
 import { WEBMENTION_PINGBACK, WEBMENTION_URL } from "astro:env/client";
 import { siteConfig } from "@/site.config";
 import type { SiteMeta } from "@/types";
+import { serializeJsonLd } from "@/utils/structuredData";
 import "@/styles/global.css";
 
 type Props = SiteMeta;
 
-const { articleDate, description, ogImage, title } = Astro.props;
+const { articleDate, description, jsonLd, markdownUrl, ogImage, title } = Astro.props;
 
 const titleSeparator = "•";
 const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
@@ -72,6 +73,14 @@ const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url
 {/* RSS auto-discovery */}
 <link href="/rss.xml" title="Blog" rel="alternate" type="application/rss+xml" />
 <link href="/notes/rss.xml" title="Notes" rel="alternate" type="application/rss+xml" />
+
+{/* Agent discovery (AgentReady AR-READ-06/07/09, AR-FIND-04) */}
+<link href="/llms.txt" title="llms.txt" rel="alternate" type="text/markdown" />
+<link href="/.well-known/ai-catalog.json" rel="ai-catalog" type="application/json" />
+{markdownUrl && <link href={markdownUrl} rel="alternate" type="text/markdown" />}
+
+{/* Structured data (AgentReady AR-READ-08) */}
+{jsonLd && <script is:inline type="application/ld+json" set:html={serializeJsonLd(jsonLd)} />}
 
 {/* Webmentions */}
 {
