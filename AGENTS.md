@@ -15,15 +15,15 @@ Personal site of Douglas Jarquin — posts, notes, and an about page. Built with
 
 Requires Node 22.23.4 or later and pnpm.
 
-| Command         | Action                                              |
-| :-------------- | :-------------------------------------------------- |
-| `pnpm install`  | Install dependencies                                |
-| `pnpm dev`      | Start the local server at `localhost:4321`          |
-| `pnpm build`    | Production build to `./dist/` (runs Pagefind after) |
-| `pnpm preview`  | Preview the production build                        |
-| `pnpm check`    | Astro type check plus Biome                         |
-| `pnpm lint`     | Biome check with writes                             |
-| `pnpm format`   | Prettier                                            |
+| Command        | Action                                              |
+| :------------- | :-------------------------------------------------- |
+| `pnpm install` | Install dependencies                                |
+| `pnpm dev`     | Start the local server at `localhost:4321`          |
+| `pnpm build`   | Production build to `./dist/` (runs Pagefind after) |
+| `pnpm preview` | Preview the production build                        |
+| `pnpm check`   | Astro type check plus Biome                         |
+| `pnpm lint`    | Biome check with writes                             |
+| `pnpm format`  | Prettier                                            |
 
 Search is production-only. After a build, `pnpm preview` is the way to try it locally.
 
