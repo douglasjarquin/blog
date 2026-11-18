@@ -1,6 +1,6 @@
 # douglasjarquin.com
 
-Personal site of [Douglas Jarquin](https://www.douglasjarquin.com/) — posts, notes, and an about page. Built with [Astro](https://astro.build) 7 and [Tailwind CSS](https://tailwindcss.com) 4, deployed to Cloudflare.
+Personal site of [Douglas Jarquin](https://www.douglasjarquin.com/) — posts, notes, and an about page. Built with [Astro](https://astro.build) 7 and [Tailwind CSS](https://tailwindcss.com) 4, deployed to GitHub Pages behind Cloudflare.
 
 ## Stack
 
@@ -9,7 +9,7 @@ Personal site of [Douglas Jarquin](https://www.douglasjarquin.com/) — posts, n
 - [Pagefind](https://pagefind.app/) static search
 - [Expressive Code](https://expressive-code.com/) for syntax highlighting
 - [Satori](https://github.com/vercel/satori) OG images, RSS, sitemap, robots.txt, web app manifest
-- Cloudflare Workers static assets via Wrangler
+- GitHub Pages via GitHub Actions, proxied by Cloudflare
 
 ## Commands
 
@@ -70,7 +70,7 @@ Draft posts (`draft: true`) are omitted from production builds, RSS, and OG imag
 
 ## Deploy
 
-`pnpm build` writes static files to `dist/`. [wrangler.toml](wrangler.toml) serves that directory as Cloudflare Worker assets (`douglasjarquin-blog`).
+`pnpm build` writes static files to `dist/`. On every push to `main`, [.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml) builds the site and deploys `dist/` (including `dist/.well-known/`) to GitHub Pages. Cloudflare proxies `www.douglasjarquin.com` in front of Pages. There is no Wrangler config.
 
 ## License
 

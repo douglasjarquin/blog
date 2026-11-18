@@ -8,7 +8,7 @@ export function toMarkdown(entry: CollectionEntry<"post"> | CollectionEntry<"not
 	const { title, description, publishDate } = entry.data;
 	const lines = [`# ${title}`, ""];
 	if (description) lines.push(`> ${description}`, "");
-	lines.push(`Published: ${publishDate.toISOString().slice(0, 10)}`, `Source: ${url}`, "");
+	lines.push(`Published: ${publishDate.toISOString()}`, `Source: ${url}`, "");
 	return `${lines.join("\n")}\n${(entry.body ?? "").trim()}\n`;
 }
 

@@ -1,6 +1,6 @@
 # douglasjarquin.com
 
-Personal site of Douglas Jarquin — posts, notes, and an about page. Built with Astro 7 and Tailwind CSS 4, deployed to Cloudflare.
+Personal site of Douglas Jarquin — posts, notes, and an about page. Built with Astro 7 and Tailwind CSS 4, deployed to GitHub Pages behind Cloudflare.
 
 ## Stack
 
@@ -9,7 +9,7 @@ Personal site of Douglas Jarquin — posts, notes, and an about page. Built with
 - Pagefind static search
 - Expressive Code for syntax highlighting
 - Satori OG images, RSS, sitemap, robots.txt, web app manifest
-- Cloudflare Workers static assets via Wrangler
+- GitHub Pages via GitHub Actions, proxied by Cloudflare
 
 ## Commands
 
@@ -39,4 +39,4 @@ Site-wide settings (title, author, dates, URL) are in `src/site.config.ts`. Soci
 
 ## Deploy
 
-`pnpm build` writes static files to `dist/`. `wrangler.toml` serves that directory as Cloudflare Worker assets (`douglasjarquin-blog`).
+`pnpm build` writes static files to `dist/`. On every push to `main`, `.github/workflows/deploy-pages.yml` builds the site and deploys `dist/` (including `dist/.well-known/`) to GitHub Pages. Cloudflare proxies `www.douglasjarquin.com` in front of Pages. There is no Wrangler config.
