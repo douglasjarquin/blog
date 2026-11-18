@@ -9,6 +9,7 @@
 		"build": "astro build",
 		"postbuild": "pagefind --site dist && pnpm run check:catalog",
 		"check:catalog": "node scripts/validate-ai-catalog.mjs dist/.well-known/ai-catalog.json",
+		"test:catalog": "node scripts/test-catalog-fixture.mjs",
 		"preview": "astro preview",
 		"check": "astro check && biome check",
 		"lint": "biome check --write",

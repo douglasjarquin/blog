@@ -12,7 +12,8 @@
 			"!**/.netlify",
 			"!**/.vscode",
 			"!**/.astro",
-			"!**/.omo"
+			"!**/.omo",
+			"!scripts/schemas"
 		]
 	},
 	"formatter": {
