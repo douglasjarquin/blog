@@ -24,3 +24,7 @@ pnpm-debug.log*
 .cache
 .omo/
 .astro
+
+# Compound Engineering machine-local overrides and scratch state.
+.compound-engineering/*.local.yaml
+.context/compound-engineering/
