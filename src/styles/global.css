@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
 @import "tailwindcss";
 
+/* Agent tooling config and artifacts are not site source; keep their prose out of class detection. */
+@source not "../../.compound-engineering";
+@source not "../../compound-packs";
+@source not "../../docs";
+
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 :root {

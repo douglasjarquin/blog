@@ -13,7 +13,7 @@ Use pnpm and the scripts in `package.json`; do not add a second package manager,
 
 The site is fully static: Astro 7 renders to `dist/`, GitHub Actions deploys it to GitHub Pages, and Cloudflare proxies it.
 Do not add a server runtime, adapter, Wrangler config, or client-side dependency for something a build-time page can produce.
-Generated endpoints such as RSS, `llms.txt`, OG images, the sitemap, and `/.well-known/` files come from `src/pages/` at build time; change their source, never their output in `dist/`.
+Generated endpoints such as RSS, `llms.txt`, OG images, and `/.well-known/` files come from `src/pages/` at build time, and the sitemap comes from the `@astrojs/sitemap` integration in `astro.config.ts`; change their source, never their output in `dist/`.
 
 Posts, notes, and tag copy live under `src/content/` and are typed by `src/content.config.ts`; the file path is the slug, so moving a file changes a public URL.
 Draft posts (`draft: true`) must stay out of production pages, RSS, and OG images.
